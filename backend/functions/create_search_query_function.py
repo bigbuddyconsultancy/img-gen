@@ -11,7 +11,7 @@ def create_search_query(text):
 
     # Initialise model
     llm = Cohere(cohere_api_key=selected_key,
-                 model='command-xlarge-beta', temperature=1.2, max_tokens=100, stop=['\n\n'])
+                 model='command', temperature=1.2, max_tokens=100, stop=['\n\n'])
 
     # create the template string
     template = """Instructions:\nCreate a search query for the text to get relevant images.\n\nText: Quantum computing is a multidisciplinary field comprising aspects of computer science, physics, and mathematics that utilizes quantum mechanics to solve complex problems faster than on classical computers.\nSearch Query: Quantum Computing\n\nText: {text}\nSearch Query:"""
